@@ -34,3 +34,6 @@ explore: firebasedatatable {
     relationship: one_to_many
   }
 }
+explore: streamingdatatable {
+
+}
