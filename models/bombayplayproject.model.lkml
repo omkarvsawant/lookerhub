@@ -34,6 +34,6 @@ explore: firebasedatatable {
     relationship: one_to_many
   }
 }
-explore: streamingdatatable {
+explore: hurricane_data_view {
 
 }
