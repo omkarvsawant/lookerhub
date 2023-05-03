@@ -37,3 +37,6 @@ explore: firebasedatatable {
 explore: datatables {
 
 }
+explore: comparativeanalysisdatatable{
+
+}
