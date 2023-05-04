@@ -34,7 +34,7 @@ explore: firebasedatatable {
     relationship: one_to_many
   }
 }
-explore: datatables {
+explore: streamingdatatable {
 
 }
 explore: comparativeanalysisdatatable{
