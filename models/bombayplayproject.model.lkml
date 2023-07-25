@@ -41,3 +41,5 @@ explore: comparativeanalysisdatatable{
 }
 
 explore: nonpartitionedtable {}
+
+explore: orders_streaming_table {}
