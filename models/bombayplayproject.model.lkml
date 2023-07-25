@@ -39,3 +39,5 @@ explore: streamingdatatable {
 explore: comparativeanalysisdatatable{
 
 }
+
+explore: nonpartitionedtable {}
