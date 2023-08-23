@@ -30,7 +30,7 @@ explore: firebasedatatable {
   join: firebasedatatable__user_properties {
     view_label: "Firebasedatatable: User Properties"
     sql: LEFT JOIN UNNEST(${firebasedatatable.user_properties}) as firebasedatatable__user_properties ;;
-    relationship: one_to_many
+    relationship: one_to_one
   }
 }
 explore: streamingdatatable {
