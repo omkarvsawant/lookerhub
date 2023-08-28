@@ -22,6 +22,7 @@ view: firebasedatatable {
 
   dimension: app_info__id {
     type: string
+    hidden: yes
     sql: ${TABLE}.app_info.id ;;
     group_label: "App Info"
     group_item_label: "ID"
