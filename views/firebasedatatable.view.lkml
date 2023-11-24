@@ -25,6 +25,7 @@ view: firebasedatatable {
     sql: ${TABLE}.app_info.id ;;
     group_label: "App Info"
     group_item_label: "ID"
+    hidden: yes
   }
 
   dimension: app_info__install_source {
