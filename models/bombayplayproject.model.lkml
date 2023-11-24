@@ -1,16 +1,14 @@
 # Define the database connection to be used for this model.
-#change-developer1
 connection: "bombayplaybqconnection"
-
 # include all the views
 include: "/views/**/*.view"
-
+include: "/dashboards/**/*.*"
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
 
 datagroup: bombayplayproject_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  max_cache_age: "24 hour"
 }
 
 persist_with: bombayplayproject_default_datagroup
@@ -32,7 +30,7 @@ explore: firebasedatatable {
   join: firebasedatatable__user_properties {
     view_label: "Firebasedatatable: User Properties"
     sql: LEFT JOIN UNNEST(${firebasedatatable.user_properties}) as firebasedatatable__user_properties ;;
-    relationship: one_to_many
+    relationship: one_to_one
   }
 }
 explore: streamingdatatable {
@@ -41,3 +39,7 @@ explore: streamingdatatable {
 explore: comparativeanalysisdatatable{
 
 }
+
+explore: nonpartitionedtable {}
+
+explore: orders_streaming_table {}

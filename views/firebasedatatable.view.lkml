@@ -22,6 +22,7 @@ view: firebasedatatable {
 
   dimension: app_info__id {
     type: string
+    hidden: yes
     sql: ${TABLE}.app_info.id ;;
     group_label: "App Info"
     group_item_label: "ID"
@@ -313,6 +314,7 @@ view: firebasedatatable {
     sql: ${TABLE}.device.operating_system ;;
     group_label: "Device"
     group_item_label: "Operating System"
+
     link: {
       label: "Website"
       url: "http://www.google.com/search?q={{ value | encode_uri }}+clothes&btnI"
@@ -663,6 +665,7 @@ view: firebasedatatable {
     sql: ${TABLE}.geo.country ;;
     group_label: "Geo"
     group_item_label: "Country"
+
     link: {
       label: "Website"
       url: "http://www.google.com/search?q={{ value | encode_uri }}+clothes&btnI"
@@ -1271,6 +1274,7 @@ view: firebasedatatable__user_properties {
     sql: ${TABLE}.decive.language ;;
     group_label: "Operating Language"
     group_item_label: "Operating Language"
+    drill_fields: [device_os, device_language, device_type]
   }
   measure: count {
     type: count
