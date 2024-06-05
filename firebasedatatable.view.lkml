@@ -5,13 +5,13 @@ explore: firebasedatatable {
   join: firebasedatatable__event_params {
     view_label: "Firebasedatatable: Event Params"
     sql: LEFT JOIN UNNEST(${firebasedatatable.event_params}) as firebasedatatable__event_params ;;
-    relationship: one_to_many
+    relationship: one_to_one
   }
 
   join: firebasedatatable__user_properties {
     view_label: "Firebasedatatable: User Properties"
     sql: LEFT JOIN UNNEST(${firebasedatatable.user_properties}) as firebasedatatable__user_properties ;;
-    relationship: one_to_many
+    relationship: one_to_one
   }
 }
 
